@@ -29,6 +29,9 @@ typedef enum boolean
 } bool;
 
 
+void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
+
 
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
