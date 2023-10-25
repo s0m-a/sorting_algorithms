@@ -11,8 +11,8 @@
 void shell_sort(int *array, size_t size)
 {
 	size_t i;
-    size_t j;
-    size_t hole = 1;
+size_t j;
+size_t hole = 1;
 	int swaps;
 
 	if (array == NULL || size < 2)

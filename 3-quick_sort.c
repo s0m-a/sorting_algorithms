@@ -11,8 +11,8 @@
 
 int l_partition(int *array, int low, int high, int size)
 {
-    int x = 0;
-	int piv = array[high];
+int x = 0;
+int piv = array[high];
 	int idx = low;
 	int tmp;
 

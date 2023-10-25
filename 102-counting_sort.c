@@ -10,9 +10,8 @@
 
 void counting_sort(int *array, size_t size)
 {
-     int max;
-    int *counter = NULL;
-	int i;
+int max, i;
+int *counter = NULL;
 	size_t j;
 	int *result = NULL;
 
@@ -47,8 +46,8 @@ void counting_sort(int *array, size_t size)
 		result[counter[array[j]] - 1] = array[j];
 		counter[array[j]]--;
 	}
-	for (j = 0; j < size; j++)
-		array[j] = result[j];
-	free(counter);
-	free(result);
+for (j = 0; j < size; j++)
+array[j] = result[j];
+free(counter);
+free(result);
 }

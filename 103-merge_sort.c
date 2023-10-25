@@ -12,7 +12,7 @@
 
 void merge_subArr(int *subarr, int *buff, size_t low, size_t mid, size_t hih)
 {
-	size_t lows,midd;
+	size_t lows, midd;
 	size_t x = 0;
 
 	print_array(subarr + low, mid - low);
@@ -78,7 +78,7 @@ void merge_call(int *subarr, int *buff, size_t low, size_t hih)
 void merge_sort(int *array, size_t size)
 {
 	int *buff;
-	buff = malloc(sizeof(int) * size);
+buff = malloc(sizeof(int) * size);
 	if (buff == NULL)
 		return;
 

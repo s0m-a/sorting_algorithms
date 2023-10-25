@@ -10,10 +10,10 @@
 
 void selection_sort(int *array, size_t size)
 {
-    int tmp;
-	size_t i;
-    size_t j;
-    size_t min;
+int tmp;
+size_t i;
+size_t j;
+size_t min;
 
 
 	if (array == NULL || size < 2)
