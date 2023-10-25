@@ -52,8 +52,8 @@ void maxHeap(int *arr, size_t size, size_t end, size_t root)
  * @array: Arr of ints
  * @size: Size of arr
  *
- * Description: Implements the sift-down heap sort
- * algorithm. Prints the array after each swap.
+ * Description: Implement  sift-down heap sort
+ * algorithm and prints the arr after swap
  */
 
 void heap_sort(int *array, size_t size)
@@ -64,12 +64,12 @@ void heap_sort(int *array, size_t size)
 		return;
 
 	for (i = (size / 2) - 1; i >= 0; i--)
-		max_heapify(array, size, size, i);
+		maxHeap(array, size, size, i);
 
 	for (i = size - 1; i > 0; i--)
 	{
 		swap_ints(array, array + i);
 		print_array(array, size);
-		max_heapify(array, size, i, 0);
+		maxHeap(array, size, i, 0);
 	}
 }
