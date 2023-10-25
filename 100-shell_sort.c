@@ -1,19 +1,17 @@
 #include "sort.h"
 
 /**
- * shell_sort -  sorts an array of integers in ascending order
+ * shell_sort - sorts an array of integers in ascending order
  * using the Shell sort algorithm, using the Knuth sequence
- * @array: Arr of ints
- * @size: size of arr
+ * @array: Array of integers
+ * @size: size of the array
  * Return: Returns nothing
  */
 
 void shell_sort(int *array, size_t size)
 {
-	size_t i;
-size_t j;
-size_t hole = 1;
-	int swaps;
+	int swap;
+	size_t x, y, hole = 1;
 
 	if (array == NULL || size < 2)
 		return;
@@ -23,14 +21,14 @@ size_t hole = 1;
 
 	while (hole > 0)
 	{
-		for (i = hole; i < size; i++)
+		for (x = hole; x < size; x++)
 		{
-			swaps = array[i];
-			for (j = i; j >= hole && array[j - hole] > swaps; j -= hole)
+			swap = array[x];
+			for (y = x; y >= hole && array[y - hole] > swap; y -= hole)
 			{
-				array[j] = array[j - hole];
+				array[y] = array[y - hole];
 			}
-			array[j] = hole;
+			array[y] = swap;
 		}
 		hole = (hole - 1) / 3;
 		print_array(array, size);
